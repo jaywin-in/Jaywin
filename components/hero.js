@@ -21,8 +21,6 @@ export default function Hero() {
             <div className="flex flex-col items-start space-x-3 space-y-3 sm:space-y-0 sm:items-center sm:flex-row">
               <a
                 href="/products"
-                target="_blank"
-                rel="noopener"
                 className="px-8 py-4 text-lg font-medium text-center text-white bg-green-600 rounded-md "
               >
                 Explore Products

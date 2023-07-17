@@ -55,7 +55,7 @@ export default function Benefits(props) {
   );
 }
 
-function Benefit(props) {
+export function Benefit(props) {
   return (
     <>
       <div className="flex items-start mt-8 space-x-3">

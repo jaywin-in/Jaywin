@@ -75,7 +75,7 @@ const ProductsList = () => {
 
   return (
     <Container className="flex flex-col">
-      <Container>
+      <Container className="flex flex-row gap-3">
         <input
           value={filterString}
           onChange={(el) => setFilterString(el.target.value)}
@@ -87,7 +87,15 @@ const ProductsList = () => {
       </Container>
       <Container className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
         {products
-          .filter((ele) => ele.name.includes(filterString))
+          .filter((ele) =>
+            ele.name.toLowerCase().includes(filterString.toLowerCase())
+          )
+          .sort((a, b) => {
+            // if (a.pos && b.pos) return b.pos < a.pos;
+            // else if (a.pos) return false;
+            // else if (b.pos) return false;
+            return a.name.localeCompare(b.name);
+          })
           .map((product) => (
             <ProductCard
               name={product.name}

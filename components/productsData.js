@@ -13,6 +13,7 @@ const products = [
     icon: "https://top-wahoo-1.10web.cloud/wp-content/uploads/2023/07/DSCF8251-19-1-1024x683.jpg",
     name: "Basmati Rice",
     desc: "Basmati rice is a premium long-grain rice with a unique aroma, flavor, and texture. It is widely used in Indian cuisine. The rice is carefully tended to ensure optimal growth and yield, then harvested, dried, milled, and sorted.​",
+    pos: 2,
   },
   {
     icon: "https://top-wahoo-1.10web.cloud/wp-content/uploads/2023/07/DSCF8645-129-1024x683.jpg",
@@ -23,16 +24,19 @@ const products = [
     icon: "https://top-wahoo-1.10web.cloud/wp-content/uploads/2023/07/DSCF8260-22-1024x683.jpg",
     name: "Brown Rice",
     desc: 'Brown rice, also known as "unpolished rice," is a popular whole grain in India. It is produced by removing only the outermost layer of the rice grain, leaving the bran and germ intact. As a result, it offers a nourishing and fiber-rich alternative to white rice for those seeking a more healthful option.',
+    pos: 1,
   },
   {
     icon: "https://top-wahoo-1.10web.cloud/wp-content/uploads/2023/07/DSCF8675-136-1024x683.jpg",
     name: "Ground Nuts",
     desc: "India is the 2nd largest ground nut producer, vital for the economy and used in snacks, cooking oil, and traditional dishes. Exports to US, China, and Japan. Govt addressing industry challenges. Significant role in food culture and growth potential.",
+    pos: 4,
   },
   {
     icon: "https://top-wahoo-1.10web.cloud/wp-content/uploads/2023/07/DSCF8819-178-1-1024x683.jpg",
-    name: "Corn",
+    name: "Maize",
     desc: "Corn is one of the most important cereal crops grown in India. It is mainly produced in the states of Karnataka, Andhra Pradesh, Maharashtra, and Telangana. The production of corn in India has been steadily increasing over the years, making it a major contributor to the country's food and economic security.",
+    pos: 3,
   },
   {
     icon: "https://top-wahoo-1.10web.cloud/wp-content/uploads/2023/07/DSCF8735-152-1024x683.jpg",
