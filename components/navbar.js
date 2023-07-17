@@ -2,6 +2,7 @@ import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import { Disclosure } from "@headlessui/react";
 
+//sample
 export default function Navbar() {
   const navigation = [
     { name: "Home", link: "/" },
