@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Container from "./container";
 import heroImg from "../public/img/hero.jpg";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -19,12 +20,11 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col items-start space-x-3 space-y-3 sm:space-y-0 sm:items-center sm:flex-row">
-              <a
-                href="/products"
-                className="px-8 py-4 text-lg font-medium text-center text-white bg-green-600 rounded-md "
-              >
-                Explore Products
-              </a>
+              <Link href="/products">
+                <a className="px-8 py-4 text-lg font-medium text-center text-white bg-green-600 rounded-md ">
+                  Explore Products
+                </a>
+              </Link>
             </div>
           </div>
         </div>

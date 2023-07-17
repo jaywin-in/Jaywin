@@ -103,7 +103,7 @@ export default function Home() {
 
             <Avatar
               image={userOneImg}
-              name="Kashi Vishwanath"
+              name="Kashi viswanath"
               title="CEO Jaywin"
             />
           </div>
