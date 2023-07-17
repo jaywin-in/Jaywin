@@ -35,7 +35,7 @@ export default function Home() {
         <title>Jaywin - Imports & Exports</title>
         <meta
           name="description"
-          content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+          content="Jaywin is a import and export business based out of india, delivering excellence worldwide"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
