@@ -14,6 +14,7 @@ import PopupWidget from "../components/popupWidget";
 
 import { products } from "../components/productsData";
 import Container from "../components/container";
+import { useState } from "react";
 
 //import dynamic from "next/dynamic";
 
@@ -40,15 +41,8 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <Container className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
-        {products.map((product) => (
-          <ProductCard
-            name={product.name}
-            desc={product.desc}
-            icon={product.icon}
-          />
-        ))}
-      </Container>
+
+      <ProductsList />
 
       {/* <Cta /> */}
       <Footer />
@@ -74,5 +68,34 @@ const ProductCard = (props) => {
         </p>
       </div>
     </div>
+  );
+};
+const ProductsList = () => {
+  const [filterString, setFilterString] = useState("");
+
+  return (
+    <Container className="flex flex-col">
+      <Container>
+        <input
+          value={filterString}
+          onChange={(el) => setFilterString(el.target.value)}
+          type="text"
+          id="large-input"
+          placeholder="&#x1f50d; Search Products"
+          class="block w-full p-4 text-gray-900 shadow-md border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </Container>
+      <Container className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
+        {products
+          .filter((ele) => ele.name.includes(filterString))
+          .map((product) => (
+            <ProductCard
+              name={product.name}
+              desc={product.desc}
+              icon={product.icon}
+            />
+          ))}
+      </Container>
+    </Container>
   );
 };
