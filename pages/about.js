@@ -11,7 +11,7 @@ import IntegrityImg from "../public/img/Business_team_3.jpg";
 import SuccessImg from "../public/img/Success.jpg";
 import IdeaImg from "../public/img/idea.jpg";
 import EarthImg from "../public/img/savePlanet.jpg";
-import userOneImg from "../public/img/kashi.jpg";
+import userOneImg from "../public/img/7309681.jpg";
 
 import {
   NewspaperIcon,
