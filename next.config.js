@@ -1,9 +1,6 @@
 module.exports = {
-  target: "serverless",
-  experimental: {
-    images: {
-      unoptimized: true,
-    },
+  images: {
+    unoptimized: true,
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
