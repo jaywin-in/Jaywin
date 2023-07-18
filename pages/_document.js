@@ -38,6 +38,16 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap"
             rel="stylesheet"
           />
+
+          <meta
+            name="description"
+            content="Jaywin is a leading import export company based in India, offering high-quality and organic Indian produce to customers across the globe. Contact us today for a quote."
+          />
+          <meta
+            name="keywords"
+            content="indian imports, indian cashew, indian basmati, indian rice, jaywin, import export, indian produce, organic, spices, grains, fruits, vegetables, worldwide"
+          />
+          <meta name="author" content="Jaywin" />
         </Head>
         <body>
           <Main />
