@@ -1,4 +1,4 @@
-const products = [
+const product = [
   {
     icon: "https://top-wahoo-1.10web.cloud/wp-content/uploads/2023/07/DSCF8434-63-1024x683.jpg",
     name: "Cinnamon",
@@ -184,4 +184,22 @@ const products = [
     desc: "Javantri is a popular spice produced in India. It is also known as mace and has a slightly sweet and nutty flavor. It is commonly used in Indian cuisine to add aroma and depth of flavor to dishes.",
   },
 ];
+
+const products = [
+  {
+    "name":"Rice",
+    "desc":"hello1",
+    "category":"Agriculture"
+  },
+  {
+    "name":"Wheat",
+    "desc":"hello1",
+    "category":"Agriculture"
+  },
+  {
+    "name":"Pipe",
+    "desc":"hello1",
+    "category":"Tools"
+  }
+]
 export { products };
