@@ -19,19 +19,21 @@ export default function Navbar() {
           {({ open }) => (
             <>
               <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
-                <Link href="/">
-                  <a className="flex items-center space-x-2 text-2xl font-bold text-green-500 dark:text-gray-100">
-                    <span>
-                      {/* <img
-                        src="/img/logo.svg"
-                        alt="N"
-                        width="32"
-                        height="32"
-                        className="w-8"
-                      /> */}
-                    </span>
-                    <span>Jaywin</span>
-                  </a>
+                <Link
+                  href="/"
+                  className="flex items-center space-x-2 text-2xl font-bold text-green-500 dark:text-gray-100">
+
+                  <span>
+                    {/* <img
+                      src="/img/logo.svg"
+                      alt="N"
+                      width="32"
+                      height="32"
+                      className="w-8"
+                    /> */}
+                  </span>
+                  <span>Jaywin</span>
+
                 </Link>
 
                 <Disclosure.Button
@@ -62,11 +64,14 @@ export default function Navbar() {
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
-                      <Link key={index} href={item.link}>
-                        <a className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none dark:focus:bg-trueGray-700">
-                          {item.name}
-                        </a>
-                      </Link>
+                      (<Link
+                        key={index}
+                        href={item.link}
+                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none dark:focus:bg-trueGray-700">
+
+                        {item.name}
+
+                      </Link>)
                     ))}
                   </>
                 </Disclosure.Panel>
@@ -80,13 +85,12 @@ export default function Navbar() {
           <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
             {navigation.map((menu, index) => (
               <li className="mr-3 nav__item" key={index}>
-                <Link href={menu.link}>
-                  <a
-                    className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none"
-                    href={menu.link}
-                  >
-                    {menu.name}
-                  </a>
+                <Link
+                  href={menu.link}
+                  className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none">
+
+                  {menu.name}
+
                 </Link>
               </li>
             ))}

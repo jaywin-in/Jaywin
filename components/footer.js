@@ -12,19 +12,21 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div>
               {" "}
-              <Link href="/">
-                <a className="flex items-center space-x-2 text-2xl font-medium text-green-500 dark:text-gray-100">
-                  {/* <span>
-                    <img
-                      src="/img/logo.svg"
-                      alt="N"
-                      width="32"
-                      height="32"
-                      className="w-8"
-                    />
-                  </span> */}
-                  <span>Jaywin</span>
-                </a>
+              <Link
+                href="/"
+                className="flex items-center space-x-2 text-2xl font-medium text-green-500 dark:text-gray-100">
+
+                {/* <span>
+                  <img
+                    src="/img/logo.svg"
+                    alt="N"
+                    width="32"
+                    height="32"
+                    className="w-8"
+                  />
+                </span> */}
+                <span>Jaywin</span>
+
               </Link>
             </div>
 
@@ -39,22 +41,28 @@ export default function Footer() {
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {navigation.map((item, index) => (
-                <Link key={index} href="/">
-                  <a className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none dark:focus:bg-trueGray-700">
-                    {item}
-                  </a>
-                </Link>
+                (<Link
+                  key={index}
+                  href="/"
+                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none dark:focus:bg-trueGray-700">
+
+                  {item}
+
+                </Link>)
               ))}
             </div>
           </div>
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
               {legal.map((item, index) => (
-                <Link key={index} href="/">
-                  <a className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none dark:focus:bg-trueGray-700">
-                    {item}
-                  </a>
-                </Link>
+                (<Link
+                  key={index}
+                  href="/"
+                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-green-500 focus:text-green-500 focus:bg-green-100 focus:outline-none dark:focus:bg-trueGray-700">
+
+                  {item}
+
+                </Link>)
               ))}
             </div>
           </div>
