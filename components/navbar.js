@@ -9,6 +9,7 @@ export default function Navbar() {
     { name: "Products", link: "/products" },
     { name: "About", link: "/about" },
     { name: "Contact Us", link: "/contact" },
+    { name: "Certificates", link: "/certificates" }
   ];
 
   return (
