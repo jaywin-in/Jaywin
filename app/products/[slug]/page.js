@@ -1,4 +1,4 @@
-'use client'
+
 import Head from "next/head";
 import Navbar from "../../../components/navbar";
 import Footer from "../../../components/footer";
@@ -6,8 +6,9 @@ import PopupWidget from "../../../components/popupWidget";
 
 import { products } from "../../../components/productsData";
 import Container from "../../../components/container";
-import { useState } from "react";
+// import { useState } from "react";
 import NextImage from "next/image";
+import { categories } from "../../../components/categoriesData";
 
 const Loader = () => {
   let circleCommonClasses = 'h-2.5 w-2.5 bg-current   rounded-full';
@@ -23,10 +24,20 @@ const Loader = () => {
   );
 };
 
+export const generateStaticParams = () => {
+  return categories.map((category) => {
+    return {
+        slug: encodeURI(category.name),
+    };
+  });
+};
 
-export default function Page({ params}) {
-  const category = decodeURI(params.slug);
-  return category ? (
+export default function Page({params}) {
+
+
+  const category_decoded = decodeURI(params.slug);
+
+  return category_decoded ? (
     <>
       <Head>
         <title>Jaywin - Imports & Exports</title>
@@ -39,7 +50,7 @@ export default function Page({ params}) {
 
       <Navbar />
 
-      <ProductsList slug={category}/>
+      <ProductsList slug={category_decoded}/>
 
       {/* <Cta /> */}
       <Footer />
@@ -47,6 +58,7 @@ export default function Page({ params}) {
     </>
   ): (<Loader/>);
 }
+
 const ExploreCard = ({ title, description, imgSrc, href }) => (
     <article
       className="rounded-lg shadow-lg flex flex-col justify-between align-middle dark:border-gray-800  dark:border-2"
@@ -95,13 +107,13 @@ const ProductCard = (props) => {
   );
 };
 const ProductsList = ({ slug }) => {
-  const [filterString, setFilterString] = useState("");
+  // const [filterString, setFilterString] = useState("");
   const categoryName = slug;
   
 
   return (
     <div className="flex flex-col">
-      <Container className="flex flex-row gap-3">
+      {/* <Container className="flex flex-row gap-3">
         <input
           value={filterString}
           onChange={(el) => setFilterString(el.target.value)}
@@ -110,12 +122,12 @@ const ProductsList = ({ slug }) => {
           placeholder="&#x1f50d; Search Products"
           class="block w-full p-4 text-gray-900 shadow-md border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
         />
-      </Container>
+      </Container> */}
       <Container className="w-fit mx-auto cards-grid grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
         {products(categoryName)
-          .filter((ele) =>
-            ele.name.toLowerCase().includes(filterString.toLowerCase())
-          )
+          // .filter((ele) =>
+          //   ele.name.toLowerCase().includes(filterString.toLowerCase())
+          // )
           .sort((a, b) => {
             return a.name.localeCompare(b.name);
           })
