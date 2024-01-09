@@ -6,7 +6,7 @@ export default function Benefits(props) {
   const { data } = props;
 
   return <>
-    <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap sm:mb-10 sm:gap-5">
+    <Container className="flex flex-wrap lg:gap-10 lg:flex-nowrap sm:mb-10 sm:gap-5">
       <div
         className={`flex items-center justify-center w-full lg:w-1/2 ${
           props.imgPos === "right" ? "lg:order-1" : ""
@@ -37,7 +37,7 @@ export default function Benefits(props) {
               {data.title}
             </h3>
 
-            <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
+            <p className="max-w-2xl py-4 text-md md:text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
               {data.desc}
             </p>
           </div>
@@ -58,7 +58,7 @@ export default function Benefits(props) {
 export function Benefit(props) {
   return (
     <>
-      <div className="flex items-start mt-8 space-x-3">
+      <div className="flex items-center mt-8 space-x-3">
         <div className="flex items-center justify-center flex-shrink-0 mt-1 bg-green-500 rounded-md w-11 h-11 ">
           {React.cloneElement(props.icon, {
             className: "w-7 h-7 text-green-50",
@@ -68,7 +68,7 @@ export function Benefit(props) {
           <h4 className="text-xl font-medium text-gray-800 dark:text-gray-200">
             {props.title}
           </h4>
-          <p className="mt-1 text-gray-500 dark:text-gray-400">
+          <p className="mt-1 text-gray-500 dark:text-gray-400 hidden md:block">
             {props.children}
           </p>
         </div>
