@@ -1,17 +1,17 @@
+"use client";
 import Head from "next/head";
-import Navbar from "../components/navbar";
-import Benefits from "../components/benefits";
-import Footer from "../components/footer";
-import PopupWidget from "../components/popupWidget";
+import Navbar from "../../components/navbar";
+import Benefits from "../../components/benefits";
+import Footer from "../../components/footer";
+import PopupWidget from "../../components/popupWidget";
 
-import SectionTitle from "../components/sectionTitle";
-import MissionImg from "../public/img/20943892.jpg";
-import VisionImg from "../public/img/Business_team_2.jpg";
-import IntegrityImg from "../public/img/Business_team_3.jpg";
-import SuccessImg from "../public/img/Success.jpg";
-import IdeaImg from "../public/img/idea.jpg";
-import EarthImg from "../public/img/savePlanet.jpg";
-import userOneImg from "../public/img/7309681.jpg";
+import MissionImg from "../../public/img/20943892.jpg";
+import VisionImg from "../../public/img/Business_team_2.jpg";
+import IntegrityImg from "../../public/img/Business_team_3.jpg";
+import SuccessImg from "../../public/img/Success.jpg";
+import IdeaImg from "../../public/img/idea.jpg";
+import EarthImg from "../../public/img/savePlanet.jpg";
+import userOneImg from "../../public/img/7309681.jpg";
 
 import {
   NewspaperIcon,
@@ -21,9 +21,9 @@ import {
   BadgeCheckIcon,
   EmojiHappyIcon,
 } from "@heroicons/react/outline";
-import Container from "../components/container";
+import Container from "../../components/container";
 import Image from "next/image";
-import { Avatar } from "../components/testimonials";
+import { Avatar } from "../../components/testimonials";
 
 //import dynamic from "next/dynamic";
 
@@ -148,9 +148,11 @@ const Benefit = (props) => {
       <Image
         src={props.icon}
         alt="Benefits"
-        layout="intrinsic"
         placeholder="blur"
-      />
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />
       <div class="p-5">
         <a href="#">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
