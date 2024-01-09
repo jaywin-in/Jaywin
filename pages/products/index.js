@@ -34,7 +34,7 @@ export default function Home() {
 const ProductCard = (props) => {
   return (
     <div className="w-82 shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
-      <a href="#" className="flex flex-col items-center justify-center h-60">
+      <a href={`/products/${props.name}`} className="flex flex-col items-center justify-center h-60">
         <img className="" src={props.icon} alt="" />
       </a>
       <div className="p-5 flex flex-col items-center justify-center h-40">

@@ -9,10 +9,26 @@ import Container from "../../../components/container";
 import { useState } from "react";
 import { usePathname } from 'next/navigation'
 
-export default function Index({ params}) {
+const Loader = () => {
+  let circleCommonClasses = 'h-2.5 w-2.5 bg-current   rounded-full';
+
+  return (
+      <div className='flex w-full h-full justify-center items-center vh-100' style={{height: '100vh'}}>
+          <div className={`${circleCommonClasses} mr-1 animate-bounce`}></div>
+          <div
+              className={`${circleCommonClasses} mr-1 animate-bounce200`}
+          ></div>
+          <div className={`${circleCommonClasses} animate-bounce400`}></div>
+      </div>
+  );
+};
+
+
+export default function Page({ params}) {
   const pathname = usePathname()
   console.log(pathname);
-  return (
+  console.log(params);
+  return pathname ? (
     <>
       <Head>
         <title>Jaywin - Imports & Exports</title>
@@ -25,13 +41,13 @@ export default function Index({ params}) {
 
       <Navbar />
 
-      <ProductsList slug={"Agriculture"}/>
+      <ProductsList slug={decodeURI(pathname).split('/')[2]}/>
 
       {/* <Cta /> */}
       <Footer />
       <PopupWidget />
     </>
-  );
+  ): (<Loader/>);
 }
 
 const ProductCard = (props) => {

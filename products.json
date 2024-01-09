@@ -214,5 +214,47 @@
     "name": "Javantri",
     "desc": "Javantri is a popular spice produced in India. It is also known as mace and has a slightly sweet and nutty flavor. It is commonly used in Indian cuisine to add aroma and depth of flavor to dishes.",
     "category": "Agriculture"
+  },
+  {
+    "icon": "placeholder-url-for-used-cnc-machines.jpg",
+    "name": "Used CNC Machines",
+    "desc": "High-quality used CNC machines, refurbished to meet industry standards. Ideal for precision machining and cost-effective production solutions.",
+    "category": "Engineering Parts"
+  },
+  {
+    "icon": "placeholder-url-for-refurbished-drilling-rigs.jpg",
+    "name": "Refurbished Drilling Rigs",
+    "desc": "Expertly refurbished drilling rigs offering reliable performance for various drilling operations. A sustainable and budget-friendly choice.",
+    "category": "Engineering Parts"
+  },
+  {
+    "icon": "placeholder-url-for-hammer-spares.jpg",
+    "name": "Hammer Spares",
+    "desc": "Durable and high-quality hammer spares, compatible with various hammer models. Ensures efficient and uninterrupted working of machinery.",
+    "category": "Engineering Parts"
+  },
+  {
+    "icon": "placeholder-url-for-drilling-spares.jpg",
+    "name": "Drilling Spares",
+    "desc": "Premium drilling spares designed for optimal drilling efficiency. Features robust construction for long-term use in demanding conditions.",
+    "category": "Engineering Parts"
+  },
+  {
+    "icon": "placeholder-url-for-drill-rods.jpg",
+    "name": "Drill Rods",
+    "desc": "High-strength drill rods, engineered for deep drilling applications. Provides excellent wear resistance and toughness.",
+    "category": "Engineering Parts"
+  },
+  {
+    "icon": "placeholder-url-for-bits.jpg",
+    "name": "Bits",
+    "desc": "Precision-engineered bits for various drilling needs. Offers superior cutting performance and longevity in a range of materials.",
+    "category": "Engineering Parts"
+  },
+  {
+    "icon": "placeholder-url-for-hammers.jpg",
+    "name": "Hammers",
+    "desc": "Robust and efficient hammers for a variety of industrial applications. Engineered for high impact and durability.",
+    "category": "Engineering Parts"
   }
 ]
