@@ -22,7 +22,7 @@ import {
   EmojiHappyIcon,
 } from "@heroicons/react/outline";
 import Container from "../components/container";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Avatar } from "../components/testimonials";
 
 //import dynamic from "next/dynamic";

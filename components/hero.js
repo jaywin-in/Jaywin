@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Container from "./container";
 import heroImg from "../public/img/hero.jpg";
 import Link from "next/link";
