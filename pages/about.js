@@ -22,7 +22,7 @@ import {
   EmojiHappyIcon,
 } from "@heroicons/react/outline";
 import Container from "../components/container";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Avatar } from "../components/testimonials";
 
 //import dynamic from "next/dynamic";
@@ -148,9 +148,11 @@ const Benefit = (props) => {
       <Image
         src={props.icon}
         alt="Benefits"
-        layout="intrinsic"
         placeholder="blur"
-      />
+        style={{
+          maxWidth: "100%",
+          height: "auto"
+        }} />
       <div class="p-5">
         <a href="#">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

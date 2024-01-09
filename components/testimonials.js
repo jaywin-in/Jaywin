@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from "react";
 import Container from "./container";
 
@@ -70,9 +70,12 @@ export function Avatar(props) {
           width="40"
           height="40"
           alt="Avatar"
-          layout="responsive"
           placeholder="blur"
-        />
+          sizes="100vw"
+          style={{
+            width: "100%",
+            height: "auto"
+          }} />
       </div>
       <div>
         <div className="text-lg font-medium">{props.name}</div>

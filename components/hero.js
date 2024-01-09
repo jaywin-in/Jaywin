@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Container from "./container";
 import heroImg from "../public/img/hero.jpg";
 import Link from "next/link";
@@ -36,10 +36,12 @@ export default function Hero() {
             width="616"
             height="617"
             alt="Hero Illustration"
-            layout="intrinsic"
             loading="eager"
             placeholder="blur"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </div>
       </div>
     </Container>
