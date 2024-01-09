@@ -1,35 +1,34 @@
+'use client'
 import Head from "next/head";
-import Hero from "../components/hero";
-import Navbar from "../components/navbar";
-import SectionTitle from "../components/sectionTitle";
+import Navbar from "../../../components/navbar";
+import Footer from "../../../components/footer";
+import PopupWidget from "../../../components/popupWidget";
 
-import { benefitOne, benefitTwo } from "../components/data";
-import Video from "../components/video";
-import Benefits from "../components/benefits";
-import Footer from "../components/footer";
-import Testimonials from "../components/testimonials";
-import Cta from "../components/cta";
-import Faq from "../components/faq";
-import PopupWidget from "../components/popupWidget";
-
-import { products } from "../components/productsData";
-import Container from "../components/container";
+import { products } from "../../../components/productsData";
+import Container from "../../../components/container";
 import { useState } from "react";
+import { usePathname } from 'next/navigation'
 
-//import dynamic from "next/dynamic";
+const Loader = () => {
+  let circleCommonClasses = 'h-2.5 w-2.5 bg-current   rounded-full';
 
-// const Video = dynamic(() => import("../components/video"));
-
-// const Benefits = dynamic(() => import("../components/benefits"));
-// const Footer = dynamic(() => import("../components/footer"));
-// const Testimonials = dynamic(() => import("../components/testimonials"));
-// const Cta = dynamic(() => import("../components/cta"));
-// const Faq = dynamic(() => import("../components/faq"));
-
-// const PopupWidget = dynamic(() => import("../components/popupWidget"));
-
-export default function Home() {
   return (
+      <div className='flex w-full h-full justify-center items-center vh-100' style={{height: '100vh'}}>
+          <div className={`${circleCommonClasses} mr-1 animate-bounce`}></div>
+          <div
+              className={`${circleCommonClasses} mr-1 animate-bounce200`}
+          ></div>
+          <div className={`${circleCommonClasses} animate-bounce400`}></div>
+      </div>
+  );
+};
+
+
+export default function Page({ params}) {
+  const pathname = usePathname()
+  console.log(pathname);
+  console.log(params);
+  return pathname ? (
     <>
       <Head>
         <title>Jaywin - Imports & Exports</title>
@@ -42,13 +41,13 @@ export default function Home() {
 
       <Navbar />
 
-      <ProductsList />
+      <ProductsList slug={decodeURI(pathname).split('/')[2]}/>
 
       {/* <Cta /> */}
       <Footer />
       <PopupWidget />
     </>
-  );
+  ): (<Loader/>);
 }
 
 const ProductCard = (props) => {
@@ -70,8 +69,10 @@ const ProductCard = (props) => {
     </div>
   );
 };
-const ProductsList = () => {
+const ProductsList = ({ slug }) => {
   const [filterString, setFilterString] = useState("");
+  const categoryName = slug;
+  
 
   return (
     <Container className="flex flex-col">
@@ -86,14 +87,11 @@ const ProductsList = () => {
         />
       </Container>
       <Container className="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
-        {products
+        {products(categoryName)
           .filter((ele) =>
             ele.name.toLowerCase().includes(filterString.toLowerCase())
           )
           .sort((a, b) => {
-            // if (a.pos && b.pos) return b.pos < a.pos;
-            // else if (a.pos) return false;
-            // else if (b.pos) return false;
             return a.name.localeCompare(b.name);
           })
           .map((product) => (

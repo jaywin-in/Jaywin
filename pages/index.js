@@ -69,7 +69,6 @@ export default function Home() {
         chat icon at bottom right corner.
       </SectionTitle>
       <Faq />
-      {/* <Cta /> */}
       <Footer />
       <PopupWidget />
     </>
