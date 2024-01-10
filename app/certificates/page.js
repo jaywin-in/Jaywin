@@ -11,6 +11,7 @@ import fssai from "../../public/img/FSSAI.jpg";
 import spices from "../../public/img/spices.jpg";
 import udyam from "../../public/img/udyam.jpg";
 import apeda from "../../public/img/apeda.jpg";
+import IEC from "../../public/img/IEC.jpg";
 import { images } from "../../components/certificates";
 
 export default function Home() {
@@ -34,6 +35,8 @@ export default function Home() {
         <Benefit title="Agricultural and Processed Food Products Export Development Authority" icon={apeda}>
         </Benefit>
         <Benefit title="Certificate of Registration  As Exported of Spices" icon={spices}>
+        </Benefit>
+        <Benefit title="Importer-Exporter Code" icon={IEC}>
         </Benefit>
       </Container>
       <Footer />
