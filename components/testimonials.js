@@ -11,8 +11,8 @@ export default function Testimonials() {
     <Container>
       <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
         <div className="lg:col-span-2 xl:col-auto">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-4 rounded-2xl py-4 dark:bg-trueGray-800 md:px-14 md:py-14">
+            <p className="text leading-normal md:text-2xl">
               I found Jaywin a <Mark>reliable and trustworthy</Mark>
               company they were absolutely amazing. They helped me find the
               right products with the best prices, and ship my products safely
@@ -27,8 +27,8 @@ export default function Testimonials() {
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-4 rounded-2xl py-4 dark:bg-trueGray-800 md:px-14 md:py-14">
+            <p className="text leading-normal md:text-2xl">
               I was <Mark>very impressed </Mark> with the level of service I
               received from Jaywin. I would definitely use them again in the
               future.
@@ -42,8 +42,8 @@ export default function Testimonials() {
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-4 rounded-2xl py-4 dark:bg-trueGray-800 md:px-14 md:py-14">
+            <p className="text leading-normal md:text-2xl">
               Jaywin has a <Mark>wide network of contacts</Mark> and they are
               experts in the export process. I am very happy with the results of
               our partnership.

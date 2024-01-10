@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
           />
           <meta name="author" content="Jaywin" />
         </head>
-        <body>
+        <body className="bg-white dark:bg-gray-800 p-0 md:p-4">
             <ClientLayout>
                 {children}
             </ClientLayout>
