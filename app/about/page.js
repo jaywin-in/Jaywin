@@ -89,8 +89,8 @@ export default function Home() {
 
       <div className="grid gap-10 lg:grid-cols-1 xl:grid-cols-1">
         <div className="lg:col-span-2 xl:col-auto">
-          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
-            <p className="text-2xl leading-normal ">
+          <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-4 rounded-2xl py-4 dark:bg-trueGray-800 md:px-14 md: py-14">
+            <p className="text-lg leading-normal md:text-2xl lg:text-3xl text-gray-900 dark:text-white">
               <h6 className="font-bold">The CEO's Vision</h6>
               <br />
               <i>
